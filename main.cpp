@@ -26,6 +26,37 @@ void mensajeBienvenida()
     cout << "Bienvenido a Exploding Kittens\n\n";
 }
 
+void BundleCards() {
+    string name = "";
+    for (int i = 0; i < 5; i++) {
+        if (i == 0) {
+            name = "desactivacion";
+            Card playerDeck = Card(name);
+            deck.push_back(playerDeck);
+        }
+        if (i == 1) {
+            name = "ataque";
+            Card playerDeck = Card(name);
+            deck.push_back(playerDeck);
+        }
+        if (i == 2) {
+            name = "pasar";
+            Card playerDeck = Card(name);
+            deck.push_back(playerDeck);
+        }
+        if (i == 3) {
+            name = "ver";
+            Card playerDeck = Card(name);
+            deck.push_back(playerDeck);
+        }
+        if (i == 4) {
+            name = "barajar";
+            Card playerDeck = Card(name);
+            deck.push_back(playerDeck);
+        }
+       
+    }
+
 void nuevoJuego()
 {
 
