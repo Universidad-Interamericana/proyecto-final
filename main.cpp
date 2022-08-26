@@ -56,7 +56,47 @@ void BundleCards() {
         }
        
     }
+oid GameLogic::MixCards() {
+    Card tempCard;
+    int deckSize = deck.size();
+    srand(10);
 
+    for (int i = 0; i < deckSize; i++) {
+        int temp = i + rand() % (deckSize - i);
+        tempCard = deck[i];
+        deck[i] = deck[temp];
+        deck[temp] = tempCard;
+    }
+
+}
+void GameLogic::DealCards() {
+
+    for (int j = 0; j < intialCards; j++) {
+
+        for (int i = 0; i < deck.size() !=0; i++) {
+            playersList[i].AddToHand(deck.at(0));
+            playersList[i].AddToHand(deck.at(i));
+            deck.erase(deck.begin());
+        }
+    }
+    string name = "desactivacion";
+    Card playerDeck = Card(name);
+    deck.push_back(Card(playerDeck));
+    playersList[0].AddToHand(playerDeck);
+}
+void GameLogic::AddExplodingKittens() {
+    int numExplodingKittens;
+    string name = "explode";
+    Card explodingKittenCard = Card(name);
+    deck.push_back(explodingKittenCard);
+
+
+}
+void GameLogic::StartGame() {
+    char choice;
+    int currentPlayer = 0;
+
+    do {
 void nuevoJuego()
 {
 
